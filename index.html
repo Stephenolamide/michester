@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transformational Leadership Training | ESM CU & ECOWAS | Michestar Global</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #005eb8;
+            --primary-dark: #004a94;
+            --secondary: #e63946;
+            --accent: #fca311;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --gray: #6c757d;
+            --light-gray: #e9ecef;
+            --border: #dee2e6;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--dark);
+            line-height: 1.6;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf9 100%);
+            min-height: 100vh;
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--primary-dark);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--accent);
+            margin-top: 2rem;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-top: 1.5rem;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            padding: 1.5rem 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            /* position: sticky; */
+            top: 0;
+            z-index: 100;
+        }
+        
+        .logo-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .logos {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        
+        .logo {
+            height: 60px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: bold;
+        }
+        
+        .logo i {
+            font-size: 2rem;
+            color: var(--accent);
+        }
+        
+        
+        .main-title {
+            text-align: center;
+            padding: 2rem 0;
+        }
+        
+        .main-title h1 {
+            color: white;
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+        
+        .main-title p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        
+        .cta-button:hover {
+            background: #e68a00;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background-color: white;
+            padding: 3rem 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            margin: 20px;
+            border-radius: 10px;
+        }
+        
+        .course-overview {
+            display: flex;
+            gap: 30px;
+            margin-top: 2rem;
+        }
+        
+        .overview-card {
+            flex: 1;
+            background: var(--light);
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border-top: 4px solid var(--accent);
+            transition: transform 0.3s ease;
+        }
+        
+        .overview-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        }
+        
+        .overview-card h3 {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 0;
+        }
+        
+        .overview-card h3 i {
+            color: var(--accent);
+        }
+        
+        .overview-card ul {
+            padding-left: 20px;
+        }
+        
+        .overview-card li {
+            margin-bottom: 0.8rem;
+            position: relative;
+        }
+        
+        .overview-card li:before {
+            content: "•";
+            color: var(--accent);
+            font-weight: bold;
+            position: absolute;
+            left: -15px;
+        }
+        
+        /* Course Outline */
+        .course-outline {
+            background-color: white;
+            padding: 3rem 0;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+        
+        .day-card {
+            background: var(--light);
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border-left: 4px solid var(--primary);
+            transition: all 0.3s ease;
+        }
+        
+        .day-card:hover {
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        }
+        
+        .day-header {
+            padding: 1.2rem 1.5rem;
+            background-color: white;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .day-header h3 {
+            margin: 0;
+            color: var(--primary-dark);
+        }
+        
+        .day-header i {
+            transition: transform 0.3s ease;
+        }
+        
+        .day-content {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .day-card.active .day-content {
+            padding: 1.5rem;
+            max-height: 1000px;
+        }
+        
+        .day-card.active .day-header i {
+            transform: rotate(180deg);
+        }
+        
+        .module {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .module:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .module h4 {
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .module h4 i {
+            color: var(--accent);
+        }
+        
+        .outcomes {
+            background: rgba(0, 94, 184, 0.05);
+            padding: 1.2rem;
+            border-radius: 6px;
+            margin-top: 1.2rem;
+        }
+        
+        .outcomes h4 {
+            color: var(--primary);
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        /* Deliverables */
+        .deliverables {
+            background-color: white;
+            padding: 3rem 0;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+        
+        .deliverables-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 1.5rem;
+        }
+        
+        .deliverable-card {
+            background: var(--light);
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            border-top: 3px solid var(--accent);
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        }
+        
+        .deliverable-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 20px rgba(0,0,0,0.1);
+        }
+        
+        .deliverable-card i {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            background: rgba(0, 94, 184, 0.1);
+            width: 70px;
+            height: 70px;
+            line-height: 70px;
+            border-radius: 50%;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            color: white;
+            padding: 4rem 0;
+            margin: 20px;
+            border-radius: 10px;
+        }
+        
+        .testimonial-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .testimonial {
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+        
+        .testimonial-text:before,
+        .testimonial-text:after {
+            content: """;
+            font-size: 3rem;
+            color: var(--accent);
+            position: absolute;
+            opacity: 0.3;
+        }
+        
+        .testimonial-text:before {
+            top: -20px;
+            left: -15px;
+        }
+        
+        .testimonial-text:after {
+            bottom: -40px;
+            right: -15px;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--primary-dark);
+            color: white;
+            padding: 3rem 0 2rem;
+            margin-top: 4rem;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+        }
+        
+        .footer-section h3 {
+            color: white;
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.2rem;
+        }
+        
+        .contact-info p {
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            margin-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            opacity: 0.8;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 1rem;
+        }
+        
+        .social-icons a {
+            color: white;
+            background: rgba(255,255,255,0.1);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            background: var(--accent);
+            transform: translateY(-3px);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .course-overview {
+                flex-direction: column;
+            }
+            
+            .main-title h1 {
+                font-size: 2.2rem;
+            }
+            
+            .logos {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .deliverables-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .animate {
+            animation: fadeIn 0.6s ease-out forwards;
+        }
+        
+        .delay-1 { animation-delay: 0.1s; }
+        .delay-2 { animation-delay: 0.2s; }
+        .delay-3 { animation-delay: 0.3s; }
+        .delay-4 { animation-delay: 0.4s; }
+        .delay-5 { animation-delay: 0.5s; }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <div class="logos">
+                    <div class="logo">
+                        <i class="fas fa-globe-africa"></i>
+                        <span>ECOWAS</span>
+                    </div>
+                    <div class="logo">
+                        <i class="fas fa-handshake"></i>
+                        <span>ESM CU</span>
+                    </div>
+                </div>
+                <!-- <div class="logo">
+                    <i class="fas fa-star"></i>
+                    <img></img>
+                    <span>Michestar Global</span>
+                </div> -->
+<div class="logo">
+    <img src="./michestar_logo.png" alt="Michestar Global Logo" height="100" width="100"/>
+    <span>Michestar Global</span>
+</div>
+
+
+            </div>
+            
+            <div class="main-title">
+                <h1>Transformational Leadership and Strategic Alignment</h1>
+                <p>5-Day Intensive Program for ECOWAS Board Members and ESM CU Staff</p>
+                <a href="#register" class="cta-button">Register Now</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h2>Program Overview</h2>
+            <p>This intensive 5-day program equips ESM CU Board Members (ECOWAS employees) and Staff with transformational leadership skills, strategic alignment tools, and wellness resilience practices. Participants will co-create a unified vision, governance framework, and actionable 2025–2028 Strategic Plan.</p>
+            
+            <div class="course-overview">
+                <div class="overview-card animate">
+                    <h3><i class="fas fa-bullseye"></i> Objectives</h3>
+                    <ul>
+                        <li>Align leadership principles and cooperative values</li>
+                        <li>Strengthen governance and member engagement</li>
+                        <li>Develop stress-management strategies for dual roles</li>
+                        <li>Formulate a measurable strategic roadmap</li>
+                        <li>Establish accountability frameworks</li>
+                    </ul>
+                </div>
+                
+                <div class="overview-card animate delay-1">
+                    <h3><i class="fas fa-users"></i> Target Audience</h3>
+                    <ul>
+                        <li>ESM CU Board Members (ECOWAS employees)</li>
+                        <li>ESM CU Operational Staff</li>
+                        <li>Department Heads and Team Leaders</li>
+                        <li>Strategic Planning Committee Members</li>
+                    </ul>
+                </div>
+                
+                <div class="overview-card animate delay-2">
+                    <h3><i class="fas fa-graduation-cap"></i> Competencies</h3>
+                    <ul>
+                        <li>Transformational Leadership</li>
+                        <li>Strategic Alignment & Governance</li>
+                        <li>Stakeholder Engagement</li>
+                        <li>Resilience & Wellness Management</li>
+                        <li>Strategic Planning & Execution</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Outline -->
+    <section class="course-outline">
+        <div class="container">
+            <h2>Detailed Program Outline</h2>
+            
+            <!-- Day 1 -->
+            <div class="day-card active">
+                <div class="day-header">
+                    <h3><i class="fas fa-flag"></i> Day 1: Leadership, Vision & Values Foundation</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="day-content">
+                    <p><strong>Objective:</strong> Establish shared purpose and cooperative leadership ethos.</p>
+                    
+                    <div class="module">
+                        <h4><i class="fas fa-sync-alt"></i> Dual Hats, One Purpose</h4>
+                        <ul>
+                            <li>Leveraging ECOWAS expertise for ESM CU growth</li>
+                            <li>Defining operational boundaries and governance protocols</li>
+                            <li>Creating synergy between organizational objectives</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="module">
+                        <h4><i class="fas fa-chess-king"></i> Transformational Leadership in Cooperatives</h4>
+                        <ul>
+                            <li>Styles, influence tactics, and purpose-driven culture building</li>
+                            <li>Case studies of successful cooperative leadership</li>
+                            <li>Developing authentic leadership approaches</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="module">
+                        <h4><i class="fas fa-lightbulb"></i> Co-developing Vision & Values</h4>
+                        <ul>
+                            <li>Joint workshop: Core value discovery</li>
+                            <li>Vision crafting session with stakeholder input</li>
+                            <li>Aligning values with organizational mission</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="outcomes">
+                        <h4><i class="fas fa-clipboard-check"></i> Key Outcomes</h4>
+                        <ul>
+                            <li>Draft Leadership Charter</li>
+                            <li>Shared Vision Statement</li>
+                            <li>Initial Values Framework</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Day 2 -->
+            <div class="day-card">
+                <div class="day-header">
+                    <h3><i class="fas fa-handshake"></i> Day 2: Governance, Engagement & Collaboration</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="day-content">
+                    <p><strong>Objective:</strong> Clarify roles and enhance member relations.</p>
+                    
+                    <div class="module">
+                        <h4><i class="fas fa-sitemap"></i> Governance vs. Operations</h4>
+                        <ul>
+                            <li>RACI Matrix for decision-making and role boundaries</li>
+                            <li>Effective governance models for cooperatives</li>
+                            <li>Balancing oversight with operational flexibility</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="module">
+                        <h4><i class="fas fa-comments"></i> Member Engagement Strategies</h4>
+                        <ul>
+                            <li>Transparent communication frameworks</li>
+                            <li>Trust-building techniques with stakeholders</li>
+                            <li>Digital engagement tools for modern cooperatives</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="module">
+                        <h4><i class="fas fa-people-arrows"></i> Board-Staff Collaboration</h4>
+                        <ul>
+                            <li>Simulations for conflict resolution</li>
+                            <li>Building productive dialogue practices</li>
+                            <li>Creating feedback loops for continuous improvement</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="outcomes">
+                        <h4><i class="fas fa-clipboard-check"></i> Key Outcomes</h4>
+                        <ul>
+                            <li>Board/Staff Collaboration Framework</li>
+                            <li>Draft Member Engagement Plan</li>
+                            <li>Role Clarification Matrix</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Day 3 -->
+            <div class="day-card">
+                <div class="day-header">
+                    <h3><i class="fas fa-heartbeat"></i> Day 3: Wellness & Role Management</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="day-content">
+                    <p><strong>Objective:</strong> Build resilience and optimize dual-role efficiency.</p>
+                    
+                    <div class="module">
+                        <h4><i class="fas fa-medkit"></i> Workplace Wellness & Burnout Prevention</h4>
+                        <ul>
+                            <li>Stress-management techniques for dual roles</li>
+                            <li>Emotional resilience practices</li>
+                            <li>Creating supportive team environments</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="module">
+                        <h4><i class="fas fa-tasks"></i> Smart Role & Time Management</h4>
+                        <ul>
+                            <li>Role-mapping matrices for efficiency</li>
+                            <li>Prioritization frameworks for strategic tasks</li>
+                            <li>Effective delegation strategies</li>
+                            <li>Technology tools for productivity</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="outcomes">
+                        <h4><i class="fas fa-clipboard-check"></i> Key Outcomes</h4>
+                        <ul>
+                            <li>Personal Wellness Plans</li>
+                            <li>Role & Task Responsibility Matrix</li>
+                            <li>Time Management Action Plans</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Day 4 -->
+            <div class="day-card">
+                <div class="day-header">
+                    <h3><i class="fas fa-chess-board"></i> Day 4: Strategy Formulation & Commitment</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="day-content">
+                    <p><strong>Objective:</strong> Define strategic pillars and accountability metrics.</p>
+                    
+                    <div class="module">
+                        <h4><i class="fas fa-chart-line"></i> Strategic Diagnostic</h4>
+                        <ul>
+                            <li>SWOT analysis of ESM CU's current state</li>
+                            <li>Identifying growth opportunities</li>
+                            <li>Competitive positioning in the cooperative landscape</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="module">
+                        <h4><i class="fas fa-drafting-compass"></i> Strategic Pillar Development</h4>
+                        <ul>
+                            <li>Goal-setting for key focus areas</li>
+                            <li>Aligning strategy with ECOWAS objectives</li>
+                            <li>Creating measurable strategic initiatives</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="module">
+                        <h4><i class="fas fa-bullseye"></i> KPI Assignment & Accountability</h4>
+                        <ul>
+                            <li>Developing measurable metrics</li>
+                            <li>Timelines and role-specific responsibilities</li>
+                            <li>Balanced scorecard approach</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="module">
+                        <h4><i class="fas fa-file-signature"></i> Leadership Commitment Ceremony</h4>
+                        <ul>
+                            <li>Signing of team/personal accountability pledges</li>
+                            <li>Public commitment to strategic objectives</li>
+                            <li>Creating a culture of ownership</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="outcomes">
+                        <h4><i class="fas fa-clipboard-check"></i> Key Outcomes</h4>
+                        <ul>
+                            <li>Draft Strategic Plan (2025–2028)</li>
+                            <li>Accountability Grid</li>
+                            <li>Leadership Commitment Agreements</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Day 5 -->
+            <div class="day-card">
+                <div class="day-header">
+                    <h3><i class="fas fa-rocket"></i> Day 5: Strategic Plan Finalization</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="day-content">
+                    <p><strong>Objective:</strong> Consolidate and refine the 2025–2028 Strategic Plan.</p>
+                    
+                    <div class="module">
+                        <h4><i class="fas fa-edit"></i> Strategic Plan Drafting</h4>
+                        <ul>
+                            <li>Group drafting sessions by strategic pillar</li>
+                            <li>Finalizing goals, KPIs, and timelines</li>
+                            <li>Resource allocation planning</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="module">
+                        <h4><i class="fas fa-search"></i> Review and Validation</h4>
+                        <ul>
+                            <li>Peer review of strategic components</li>
+                            <li>Leadership validation and approval</li>
+                            <li>Alignment with stakeholder expectations</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="module">
+                        <h4><i class="fas fa-road"></i> Implementation Roadmap</h4>
+                        <ul>
+                            <li>Developing 90-day action plans</li>
+                            <li>Resource allocation and support systems</li>
+                            <li>Establishing monitoring and evaluation processes</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="outcomes">
+                        <h4><i class="fas fa-clipboard-check"></i> Key Outcomes</h4>
+                        <ul>
+                            <li>Approved Strategic Plan Draft</li>
+                            <li>Implementation Roadmap</li>
+                            <li>90-Day Action Plans</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Deliverables Section -->
+    <section class="deliverables">
+        <div class="container">
+            <h2>Training Deliverables</h2>
+            <p>Participants will receive comprehensive materials and tools to support implementation post-training.</p>
+            
+            <div class="deliverables-grid">
+                <div class="deliverable-card animate">
+                    <i class="fas fa-book"></i>
+                    <h4>Participant Workbook</h4>
+                    <p>Pre-work, exercises, templates, and reference materials</p>
+                </div>
+                
+                <div class="deliverable-card animate delay-1">
+                    <i class="fas fa-file-contract"></i>
+                    <h4>Leadership Charter</h4>
+                    <p>Document outlining leadership commitments and principles</p>
+                </div>
+                
+                <div class="deliverable-card animate delay-2">
+                    <i class="fas fa-chart-line"></i>
+                    <h4>Strategic Plan Draft</h4>
+                    <p>2025–2028 Strategic Plan framework</p>
+                </div>
+                
+                <div class="deliverable-card animate delay-3">
+                    <i class="fas fa-tools"></i>
+                    <h4>Time & Wellness Toolkit</h4>
+                    <p>Practical tools for role management and well-being</p>
+                </div>
+                
+                <div class="deliverable-card animate delay-4">
+                    <i class="fas fa-certificate"></i>
+                    <h4>Certificate of Participation</h4>
+                    <p>Formal recognition of program completion</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="testimonial-container">
+                <h2>What Participants Say</h2>
+                
+                <div class="testimonial">
+                    <div class="testimonial-text">
+                        "This program transformed how we approach leadership in our cooperative. The practical frameworks and collaborative approach helped us develop a strategic plan that truly reflects our collective vision."
+                    </div>
+                    <div class="testimonial-author">- Dr. Amina Diallo, Board Chair</div>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="testimonial-text">
+                        "The wellness strategies and role management tools have been invaluable. I've implemented several techniques that have significantly reduced my stress levels while improving my effectiveness in both roles."
+                    </div>
+                    <div class="testimonial-author">- Kwame Osei, Operations Director</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="register">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About the Program</h3>
+                    <p>This program is designed specifically for ECOWAS employees serving on the ESM CU Board and operational staff. It addresses the unique challenges of transformational leadership in cooperative environments.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section contact-info">
+                    <h3>Contact Information</h3>
+                    <p><i class="fas fa-envelope"></i> training@michestarglobal.com</p>
+                    <p><i class="fas fa-phone"></i> +1 (234) 567-8900</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Leadership Avenue, Business District</p>
+                    <p><i class="fas fa-globe"></i> www.michestarglobal.com</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Program Details</h3>
+                    <p><i class="fas fa-calendar"></i> Next Session: October 15-19, 2023</p>
+                    <p><i class="fas fa-clock"></i> 9:00 AM - 4:30 PM Daily</p>
+                    <p><i class="fas fa-map-pin"></i> ECOWAS Conference Center</p>
+                    <a href="#" class="cta-button" style="margin-top: 15px; display: inline-block;">Download Brochure</a>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 Michestar Global Resources. All Rights Reserved. | Aligning ECOWAS Leadership with ESM CU's Cooperative Mission</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Accordion functionality for course days
+        document.querySelectorAll('.day-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const dayCard = header.parentElement;
+                dayCard.classList.toggle('active');
+                
+                // Close other open day cards
+                document.querySelectorAll('.day-card').forEach(card => {
+                    if (card !== dayCard && card.classList.contains('active')) {
+                        card.classList.remove('active');
+                    }
+                });
+            });
+        });
+        
+        // Animation on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate');
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            document.querySelectorAll('.overview-card, .deliverable-card').forEach(card => {
+                observer.observe(card);
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
